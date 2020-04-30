@@ -6,7 +6,7 @@ Sysnut é uma aplicação Móvel para profesores e estudantes de Nutrição orie
 
 * **Linneu Lopes** - *Full development* - [LinneuDM](https://github.com/LinneuDM)
 * **Jonnison Lima** - *Project Manager* - [Jonnison](https://github.com/jonnison)
-* **Luis Felipe Melo** - *App development* - [Jonnison](https://github.com/felipe-dot)
+* **Luis Felipe Melo** - *App development* - [Felipe-dot](https://github.com/felipe-dot)
 * **Alcemir Santos** - *Supervisor* - [alcemirsantos](https://github.com/alcemirsantos)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
