@@ -45,6 +45,7 @@ flutter:
      - assets/images/iconnutri.png
      - assets/images/login.png
      - assets/images/icon_google.png
+     - assets/images/image_icon.png
   #  - images/a_dot_ham.jpeg
 
   fonts:

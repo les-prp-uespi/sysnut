@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './signup_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -6,7 +7,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.yellow,
+        color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -169,7 +170,7 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginPage(),  // SignupPage 
+                      builder: (context) => SignupPage(),  // SignupPage 
                     ),  
                   );
                 },
