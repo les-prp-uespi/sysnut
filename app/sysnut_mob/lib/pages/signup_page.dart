@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import '../main.dart';
 
 class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(
@@ -13,7 +15,7 @@ class SignupPage extends StatelessWidget {
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            Container(   
+            Container(
               width: 160,
               height: 160,
               alignment: Alignment(0.0, 1.15),
@@ -46,12 +48,15 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 child: SizedBox.expand(
-                  child: FlatButton(
-                    child: Icon(
-                      Icons.photo_camera,
-                      color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: FlatButton(
+                      child: Icon(
+                        Icons.photo_camera,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {},
                     ),
-                    onPressed: () {},
                   ),
                 ),
               ),
@@ -132,7 +137,7 @@ class SignupPage extends StatelessWidget {
                 labelText: "Data de Nascimento",
                 hintText: "Dia/Mês/Ano",
                 labelStyle: TextStyle(
-                  color: Colors.black38,
+                  color: Colors.black38,   
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -226,7 +231,12 @@ class SignupPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyHomePage(),
+                    ),
+                  ),
                 ),
               ),
             ),

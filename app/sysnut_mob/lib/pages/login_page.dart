@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import './signup_page.dart';
+import '../main.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(    
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,
@@ -28,7 +29,9 @@ class LoginPage extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             SizedBox(
               height: 10,
@@ -44,24 +47,27 @@ class LoginPage extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             Container(
               height: 40,
               alignment: Alignment.centerRight,
               child: FlatButton(
-                  child: Text(
-                    "Recuperar Senha",
-                    textAlign: TextAlign.right,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LoginPage(),  // ResetPasswordPage()
-                      ),
-                    );
-                  }),
+                child: Text(
+                  "Recuperar Senha",
+                  textAlign: TextAlign.right,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(), // ResetPasswordPage()
+                    ),
+                  );
+                },
+              ),
             ),
             SizedBox(
               height: 40,
@@ -75,8 +81,8 @@ class LoginPage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   stops: [0.3, 1],
                   colors: [
-                    Colors.blueAccent,
-                    Colors.blue[900],
+                    Colors.deepPurple,
+                    Colors.purpleAccent,
                   ],
                 ),
                 borderRadius: BorderRadius.all(
@@ -85,32 +91,20 @@ class LoginPage extends StatelessWidget {
               ),
               child: SizedBox.expand(
                 child: FlatButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Login",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/images/login.png"),
-                          height: 50,
-                          width: 50,
-                        ),
-                      ),
-                    ],
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 20,                        
+                    ),
+                    textAlign: TextAlign.center,                     
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginPage(), // HomePage()
+                        builder: (context) => MyHomePage(),
                       ),
                     );
                   },
@@ -130,7 +124,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               child: SizedBox.expand(
-                child: FlatButton(
+                child: RaisedButton(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -152,12 +146,12 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onPressed:() {},
+                  onPressed: () {},
                 ),
               ),
             ),
             SizedBox(
-              height: 10, 
+              height: 10,
             ),
             Container(
               height: 40,
@@ -170,8 +164,8 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignupPage(),  // SignupPage 
-                    ),  
+                      builder: (context) => SignupPage(), // SignupPage
+                    ),
                   );
                 },
               ),
