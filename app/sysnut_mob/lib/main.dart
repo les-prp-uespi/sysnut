@@ -28,97 +28,159 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Padding(
-          padding: const EdgeInsets.all(70),
-          child: Text(
-            "SysNut",
-            style: TextStyle(
-              fontFamily: "Dancing Script",
-              fontSize: 27,
-              color: Colors.black,
-            ),
-            textAlign: TextAlign.center,
+        centerTitle: true,
+        title: Text(
+          "SysNut",
+          style: TextStyle(
+            fontFamily: "Dancing Script",
+            fontSize: 27,
+            color: Colors.black,
           ),
+          textAlign: TextAlign.center,
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.list),
             onPressed: () {},
             alignment: Alignment.center,
           ),
         ],
       ),
+
+      //
+      //
+      //
+
       body: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [0.3, 1.5],
+            colors: [
+              Colors.deepPurple,
+              Colors.purpleAccent,
+            ],
+          ),
+        ),
+        child: ListView(
           children: <Widget>[
+            Container(
+              color: Colors.amber,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  CircleAvatar(
+                    radius: 35,
+                    backgroundColor: Colors.transparent,
+                    backgroundImage: AssetImage("assets/images/fruits.png"),
+                  ),
+                  Text(
+                    "Bem Vindo de Volta",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(
+                    "Dr Felipe",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "O que Temos para Hoje",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 60,
+            ),
             Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 450,
-                ),
-                RaisedButton(
-                  color: Colors.purpleAccent,
-                  elevation: 5,
-                  child: Text(
-                    "Pacientes",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    textAlign: TextAlign.center,
+                ButtonTheme(
+                  height: 145,
+                  minWidth: 150,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      FlatButton(
+                        color: Colors.white,
+                        child: Text(
+                          "Pacientes",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      FlatButton(
+                        color: Colors.white,
+                        child: Text(
+                          "Alimentos",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
                   ),
-                  onPressed: () {},
-                ),
-                RaisedButton(
-                  color: Colors.purpleAccent,
-                  elevation: 5,
-                  child: Text(
-                    "Orientações",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: () {},
                 ),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                SizedBox(
-                  height: 450,
-                ),
-                RaisedButton(
-                  color: Colors.purpleAccent,
-                  elevation: 5,
-                  child: Text(
-                    "Alimentos",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
+            SizedBox(
+              height: 25,
+            ),
+            ButtonTheme(
+              height: 145,
+              minWidth: 150,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  FlatButton(
+                    color: Colors.white,
+                    child: Text(
+                      "Orientações",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
+                    onPressed: () {},
                   ),
-                  onPressed: () {},
-                ),
-                RaisedButton(
-                  color: Colors.purpleAccent,
-                  elevation: 5,
-                  child: Text(
-                    "Calculadora",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
+                  SizedBox(
+                    width: 10,
+                  ),
+                  FlatButton(
+                    color: Colors.white,
+                    child: Text(
+                      "Calculadora",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
+                    onPressed: () {},
                   ),
-                  onPressed: () {},
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

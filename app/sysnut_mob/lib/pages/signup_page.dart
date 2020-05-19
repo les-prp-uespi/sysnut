@@ -41,7 +41,7 @@ class SignupPage extends StatelessWidget {
                   ),
                   border: Border.all(
                     width: 4.0,
-                    color: Colors.black38, // const
+                    color: Colors.black38, 
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(56),
