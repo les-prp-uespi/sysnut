@@ -4,7 +4,6 @@ import '../main.dart';
 class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(
@@ -41,7 +40,7 @@ class SignupPage extends StatelessWidget {
                   ),
                   border: Border.all(
                     width: 4.0,
-                    color: Colors.black38, 
+                    color: Colors.black38,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(56),
@@ -137,7 +136,7 @@ class SignupPage extends StatelessWidget {
                 labelText: "Data de Nascimento",
                 hintText: "Dia/Mês/Ano",
                 labelStyle: TextStyle(
-                  color: Colors.black38,   
+                  color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),

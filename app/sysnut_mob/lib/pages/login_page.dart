@@ -5,7 +5,7 @@ import '../main.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(    
+    return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: Colors.white,
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
               child: Image.asset("assets/images/iconnutri.png"),
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
@@ -63,14 +63,14 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginPage(), // ResetPasswordPage()
-                    ),
+                        builder: (context) => LoginPage(),  // ResetPasswordPage()
+                        ),
                   );
                 },
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 60,
             ),
             Container(
               height: 60,
@@ -96,9 +96,9 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
-                      fontSize: 20,                        
+                      fontSize: 20,
                     ),
-                    textAlign: TextAlign.center,                     
+                    textAlign: TextAlign.center,
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -112,46 +112,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 60,
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
-                child: RaisedButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Login com  o Google",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/images/icon_google.png"),
-                          height: 50,
-                          width: 50,
-                        ),
-                      ),
-                    ],
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
+              height: 20,
             ),
             Container(
               height: 40,

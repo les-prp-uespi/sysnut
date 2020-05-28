@@ -47,6 +47,7 @@ flutter:
      - assets/images/image_icon.png
      - assets/images/fruits.png
      - assets/images/patients.png
+     - assets/images/nutricionist.png
   #  - images/a_dot_ham.jpeg
 
   fonts:
