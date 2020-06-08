@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sysnut_mob/myWidgets/myTextform.dart';
 import './signup_page.dart';
 import '../main.dart';
 
@@ -11,46 +12,30 @@ class LoginPage extends StatelessWidget {
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            SizedBox(
-              width: 128,
-              height: 128,
-              child: Image.asset("assets/images/iconnutri.png"),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: "E-mail",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
+            Column(
+              children: <Widget>[
+                SizedBox(
+                  width: 128,
+                  height: 128,
+                  child: Image.asset("assets/images/iconnutri.png"),
                 ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
+                Text(
+                  "SysNut",
+                  style: TextStyle(
+                    fontFamily: "Dancing Script",
+                    fontSize: 35,
+                  ),
+                ),
+              ],
             ),
+            SizedBox(
+              height: 25,
+            ),
+            MyTextFormField("email", TextInputType.emailAddress, false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Senha",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("senha", TextInputType.text, true),
             Container(
               height: 40,
               alignment: Alignment.centerRight,
@@ -63,8 +48,8 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => LoginPage(),  // ResetPasswordPage()
-                        ),
+                      builder: (context) => LoginPage(), // ResetPasswordPage()
+                    ),
                   );
                 },
               ),

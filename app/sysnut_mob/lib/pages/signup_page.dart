@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sysnut_mob/myWidgets/myTextform.dart';
 import '../main.dart';
 
 class SignupPage extends StatelessWidget {
@@ -63,142 +64,35 @@ class SignupPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                labelText: "Usuário",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("Usuário", TextInputType.text,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                labelText: "Nome Completo",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("Nome Completo", TextInputType.text,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: "E-mail",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("email", TextInputType.emailAddress,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                labelText: "CRN",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("CRN", TextInputType.number,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.datetime,
-              decoration: InputDecoration(
-                labelText: "Data de Nascimento",
-                hintText: "Dia/Mês/Ano",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("Data de Nascimento", TextInputType.datetime,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Telefone",
-                hintText: "(__) _ ____-____",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("telefone", TextInputType.number,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: "Senha",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            MyTextFormField("Senha",TextInputType.text,false),
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: " Confirmar Senha",
-                labelStyle: TextStyle(
-                  color: Colors.black38,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+             MyTextFormField("Confirmar Senha",TextInputType.text,false),
             SizedBox(
               height: 10,
             ),
