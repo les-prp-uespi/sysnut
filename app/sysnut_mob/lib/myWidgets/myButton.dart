@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyButton extends StatelessWidget {
   final String name;
   final IconData myIcon;
-  var myPage;
+  final Widget myPage;
 
   MyButton(this.name, this.myIcon,this.myPage);
 
@@ -19,7 +19,7 @@ class MyButton extends StatelessWidget {
             color: Colors.white,
           ),
           Text(
-            "${name}",
+            name,
             style: TextStyle(
               fontSize: 25,
               fontFamily: "Dancing Script",

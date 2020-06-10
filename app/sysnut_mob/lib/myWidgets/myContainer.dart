@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
 class MyContainer extends StatelessWidget {
-  final double MyHeight;
-  final double MyWidth;
-  final Alignment MyAligment;
-  final Alignment MyBeginAligment;
-  final Alignment MyEndAligment;
+  final double myHeight;
+  final double myWidth;
+  final Alignment myAligment;
+  final Alignment myBeginAligment;
+  final Alignment myEndAligment;
 
   MyContainer(
-    this.MyHeight,
-    this.MyWidth,
-    this.MyAligment,
-    this.MyBeginAligment,
-    this.MyEndAligment,
+    this.myHeight,
+    this.myWidth,
+    this.myAligment,
+    this.myBeginAligment,
+    this.myEndAligment,
   );
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MyHeight,
-      width: MyWidth,
-      alignment: MyAligment,
+      height: myHeight,
+      width: myWidth,
+      alignment: myAligment,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: MyBeginAligment,
-          end: MyEndAligment,
+          begin: myBeginAligment,
+          end: myEndAligment,
           stops: [0.3, 0.7],
           colors: [
             Colors.deepPurple,

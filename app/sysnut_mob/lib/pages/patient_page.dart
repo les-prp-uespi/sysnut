@@ -19,7 +19,6 @@ class PatientPage extends StatelessWidget {
           children: <Widget>[
             Container(
               child: RaisedButton(
-                color: Colors.green,
                 child: Row(
                   children: <Widget>[
                     CircleAvatar(

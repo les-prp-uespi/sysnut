@@ -14,7 +14,7 @@ class MyTextFormField extends StatelessWidget {
       keyboardType: myInput,
       obscureText: myBool,
       decoration: InputDecoration(
-        labelText: "${myText}",
+        labelText: myText,
         labelStyle: TextStyle(
           color: Colors.black38,
           fontWeight: FontWeight.w400,
