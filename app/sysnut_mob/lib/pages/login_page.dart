@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sysnut_mob/myWidgets/myTextform.dart';
 import './signup_page.dart';
 import '../main.dart';
 
@@ -12,30 +11,46 @@ class LoginPage extends StatelessWidget {
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            Column(
-              children: <Widget>[
-                SizedBox(
-                  width: 128,
-                  height: 128,
-                  child: Image.asset("assets/images/iconnutri.png"),
-                ),
-                Text(
-                  "SysNut",
-                  style: TextStyle(
-                    fontFamily: "Dancing Script",
-                    fontSize: 35,
-                  ),
-                ),
-              ],
+            SizedBox(
+              width: 128,
+              height: 128,
+              child: Image.asset("assets/images/iconnutri.png"),
             ),
             SizedBox(
-              height: 25,
+              height: 40,
             ),
-            MyTextFormField("email", TextInputType.emailAddress, false),
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "E-mail",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             SizedBox(
               height: 10,
             ),
-            MyTextFormField("senha", TextInputType.text, true),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Senha",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             Container(
               height: 40,
               alignment: Alignment.centerRight,
@@ -48,8 +63,8 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginPage(), // ResetPasswordPage()
-                    ),
+                        builder: (context) => LoginPage(),  // ResetPasswordPage()
+                        ),
                   );
                 },
               ),
@@ -80,7 +95,7 @@ class LoginPage extends StatelessWidget {
                     "Login",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 20,
                     ),
                     textAlign: TextAlign.center,

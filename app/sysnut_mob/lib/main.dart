@@ -3,6 +3,7 @@ import 'myWidgets/myDrawer.dart';
 import 'pages/login_page.dart';
 import 'pages/patient_page.dart';
 import './myWidgets/myButton.dart';
+import 'pages/calculator_page.dart';
 
 main() => runApp(SysnutApp());
 
@@ -107,38 +108,30 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  ButtonTheme(
-                    height: 145,
-                    minWidth: 150,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        MyButton("Pacientes", Icons.person, PatientPage()),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        MyButton("Alimentos", Icons.fastfood, LoginPage()),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      MyButton("Pacientes", Icons.person, PatientPage()),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      MyButton("Alimentos", Icons.fastfood, LoginPage()),
+                    ],
                   ),
                   SizedBox(
                     height: 15,
                   ),
-                  ButtonTheme(
-                    height: 145,
-                    minWidth: 150,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        MyButton("Orientações", Icons.insert_drive_file,
-                            LoginPage()),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        MyButton(
-                            "Calculadora", Icons.phone_android, LoginPage()),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      MyButton(
+                          "Orientações", Icons.insert_drive_file, LoginPage()),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      MyButton(
+                          "Calculadora", Icons.phone_android, CalculatorPage()),
+                    ],
                   ),
                 ],
               ),

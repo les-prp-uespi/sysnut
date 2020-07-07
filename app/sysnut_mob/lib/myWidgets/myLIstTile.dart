@@ -1,42 +1,23 @@
 import 'package:flutter/material.dart';
 
 class MyListTile extends StatelessWidget {
-  final Widget myWidget;
-  final String myText;
-  final IconData myIcon;
-  final double mySize;
+  final Widget myLeading;
+  final Widget mytitle;
+  final Widget myTrailing;
 
-  MyListTile(
-    this.myText,
-    this.myIcon,
-    this.mySize,
-    [this.myWidget]
-  );
+  MyListTile([this.myLeading, this.mytitle, this.myTrailing]);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: myWidget,
-      title: Text(
-        myText,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: mySize,
-        ),
-      ),
-      trailing: IconButton(
-        icon: Icon(
-          myIcon,
-          color: Colors.white,
-        ),
-        onPressed: () => Navigator.pop(context, false),
-      ),
+      leading: myLeading,
+      title: mytitle,
+      trailing: myTrailing,
     );
   }
 }
 
 class MyCircleAvatar extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
@@ -47,13 +28,35 @@ class MyCircleAvatar extends StatelessWidget {
   }
 }
 
-class MyIcon extends StatelessWidget {
+class MyIconButton extends StatelessWidget {
+  final IconData myIcon;
+  MyIconButton(this.myIcon);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return IconButton(
+      icon: Icon(
+        myIcon,
+        color: Colors.white,
+      ),
+      onPressed: () => Navigator.pop(context, false),
     );
   }
 }
 
+class MyText extends StatelessWidget {
+  final String myText;
+  final double mySize;
+  MyText(this.myText, this.mySize);
 
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      myText,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: mySize,
+      ),
+    );
+  }
+}
